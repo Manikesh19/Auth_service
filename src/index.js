@@ -16,12 +16,12 @@ const prepareAndStartServer= () => {
     app.listen(PORT, async()=> {
         console.log(`Server started on Port: ${PORT}`);
 
-        const service= new UserService();
+        // const service= new UserService();
         // const newToken= service.createToken({email:'manikesh123@gmail.com', id:1});
         // console.log("New token is",newToken);
-        const token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbmlrZXNoMTIzQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MzY0NDEwNjcsImV4cCI6MTczNjQ0MTA5N30.JbKs5NDKS8rR1UzcuU-6gyHpGj2-qP10prYOU3LuWDE';
-        const response= service.verifyToken(token);
-        console.log(response);
+        // const token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hbmlrZXNoMTIzQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MzY0NDEwNjcsImV4cCI6MTczNjQ0MTA5N30.JbKs5NDKS8rR1UzcuU-6gyHpGj2-qP10prYOU3LuWDE';
+        // const response= service.verifyToken(token);
+        // console.log(response);
     })
 }
 
