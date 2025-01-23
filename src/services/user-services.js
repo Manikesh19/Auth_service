@@ -13,8 +13,11 @@ class UserServices {
             const user= await this.userRepository.create(data);
             return user;
         } catch (error) {
+            if(error.name=='SequelizeValidationError') {
+                throw error;
+            }
             console.log("Something went wrong in services layer");
-            throw{error}
+            throw error;
         }
     }
 
@@ -24,7 +27,7 @@ class UserServices {
             return true;
         } catch (error) {
             console.log("Something went wrong in services layer");
-            throw{error}
+            throw error;
         }
     }
 
@@ -66,7 +69,7 @@ class UserServices {
             return result;
         } catch (error) {
             console.log("Something went wrong in token creation");
-            throw {error}
+            throw error;
         }
     }
 
@@ -78,7 +81,7 @@ class UserServices {
 
         } catch (error) {
             console.log("Something went wrong in token validation",error);
-            throw {error}
+            throw error;
         }
     }
 
